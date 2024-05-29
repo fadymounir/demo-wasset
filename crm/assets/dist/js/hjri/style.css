@@ -1,0 +1,32 @@
+.ui-datepicker td span,
+.ui-datepicker td a {
+  padding-bottom: 1em;
+}
+.ui-datepicker-calendar{
+    width:100%;
+}
+.ui-datepicker-title[data-custom] {
+    display: flex;
+    position: relative;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+.ui-datepicker-title[data-custom]::after {
+  color: green;
+  content: attr(data-custom);
+  display: block;
+  font-size: small;
+  margin-left:50px;
+}
+
+.ui-datepicker td[title]::after {
+    content: attr(title);
+    display: block;
+    position: absolute;
+    left: 12px;
+    color: green;
+    bottom: 6px;
+    font-size: 1.4em;
+    text-align: right;
+    padding-right: 0.25em;
+}

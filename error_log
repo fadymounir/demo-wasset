@@ -1,0 +1,20 @@
+[17-Aug-2023 17:42:31 Asia/Riyadh] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'sahabala_db.page' doesn't exist in /home4/sahabala/public_html/index.php:41
+Stack trace:
+#0 /home4/sahabala/public_html/index.php(41): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home4/sahabala/public_html/index.php on line 41
+[17-Aug-2023 17:43:21 Asia/Riyadh] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'sahabala_db.page' doesn't exist in /home4/sahabala/public_html/index.php:41
+Stack trace:
+#0 /home4/sahabala/public_html/index.php(41): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home4/sahabala/public_html/index.php on line 41
+[17-Aug-2023 17:53:08 Asia/Riyadh] PHP Fatal error:  Uncaught mysqli_sql_exception: Table 'sahabala_db.page' doesn't exist in /home4/sahabala/public_html/index.php:41
+Stack trace:
+#0 /home4/sahabala/public_html/index.php(41): mysqli_query(Object(mysqli), 'SELECT * FROM `...')
+#1 {main}
+  thrown in /home4/sahabala/public_html/index.php on line 41
+[18-Aug-2023 11:57:15 America/Chicago] PHP Warning:  require(wp-blog-header.php): Failed to open stream: No such file or directory in /home4/sahabala/public_html/sapp-wp-signon.php on line 40
+[18-Aug-2023 11:57:15 America/Chicago] PHP Fatal error:  Uncaught Error: Failed opening required 'wp-blog-header.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home4/sahabala/public_html/sapp-wp-signon.php:40
+Stack trace:
+#0 {main}
+  thrown in /home4/sahabala/public_html/sapp-wp-signon.php on line 40

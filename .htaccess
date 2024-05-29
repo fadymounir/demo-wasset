@@ -1,0 +1,40 @@
+RewriteEngine On
+RewriteBase /
+
+# Ensure POST requests aren't redirected
+RewriteCond %{REQUEST_METHOD} =POST [NC]
+RewriteRule ^ - [L]
+
+
+# Redirect old format of property to new format
+RewriteCond %{THE_REQUEST} \s/property\.php\?slug=([^\s&]+) [NC]
+RewriteRule ^ /property/%1? [R=301,L]
+
+# Internally rewrite new format of property to old format
+RewriteRule ^property/([^/]+)/?$ property.php?slug=$1 [L,QSA]
+
+# Redirect old format of project to new format
+RewriteCond %{THE_REQUEST} \s/project\.php\?slug=([^\s&]+) [NC]
+RewriteRule ^ /project/%1? [R=301,L]
+
+# Internally rewrite new format of project to old format
+RewriteRule ^project/([^/]+)/?$ project.php?slug=$1 [L,QSA]
+
+# Removing .php extension from static pages
+RewriteCond %{THE_REQUEST} /([^.]+)\.php [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally rewrite extensionless URLs back to .php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.php -f
+RewriteRule ^(.+?)/?$ $1.php [L]
+
+
+# Rewrite rule for /code/<code_value>?<page_value>
+RewriteRule ^code/([^/]+)/([^/]+)$ index.php?code=$1&page=$2 [QSA,L]
+
+RewriteEngine On
+ErrorDocument 404 /404.php
+
+
+ 
